@@ -1,0 +1,12 @@
+HOW TO MAKE A ETCH-A-SKETCH GAME
+
+Make a whiteboard to write on 
+This white board consists of many smaller boxes
+change the size of the board using a slider 
+when the cursor is on top of these boxes the smaller boxes change color
+give the cursor black ink, rainbow, and color picker to choose different colors
+make an eraser on the cursor which makes the colored boxes white
+
+
+
+
