@@ -25,8 +25,11 @@ html, body {
 }
 
 .sketch-pad {
-    background-color: black;
+    background-color: white;
     min-height: 450px;
     min-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px #000;
+
 }
 
