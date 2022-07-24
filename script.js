@@ -13,9 +13,18 @@ function populateSketchPad(size) {
     }
 }
 
+function sketchPadSizeValidations(size) {
+    
+    if (size <= 0 || size > 64) {
+        return console.log('Please enter a value between 0 and 64');
+    } else {
+        populateSketchPad(size);
+    }
+}
+
 btnSetSize.addEventListener('click', () => {
     const sketchPadSize = document.querySelector('#sizeInput').value;
-    populateSketchPad(sketchPadSize);
+    sketchPadSizeValidations(sketchPadSize);
 })
     
     
