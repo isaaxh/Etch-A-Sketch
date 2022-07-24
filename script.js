@@ -1,6 +1,6 @@
 const sketchPad = document.querySelector('.sketchPad');
 const btnSetSize = document.querySelector('#btnSetSize');
-
+const btnReset = document.querySelector('#btnReset');
 
 function populateSketchPad(size) {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -22,10 +22,14 @@ function sketchPadSizeValidations(size) {
     }
 }
 
+
+
 btnSetSize.addEventListener('click', () => {
     const sketchPadSize = document.querySelector('#sizeInput').value;
     sketchPadSizeValidations(sketchPadSize);
 })
     
-    
+btnReset.addEventListener('click', () => {
+    sketchPad.textContent = '';
+})    
     
