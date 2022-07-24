@@ -1,29 +1,22 @@
-// const container = document.querySelector(".container");
-// const secondContainer = document.querySelector(".secondary-Container");
+const sketchPad = document.querySelector('.sketchPad');
+const btnSetSize = document.querySelector('#btnSetSize');
 
-// function createADiv(divName,attName) {
-//     divName = document.createElement("div");
-//     divName.setAttribute("class", attName);
-//     secondContainer.appendChild(divName);
-// }
 
-// function createAButton(btnName, btnAttName) {
-//     btnName = document.createElement("button");
-//     btnName.innerText = btnAttName;
-//     btnName.setAttribute("class", btnAttName);
-//     optionsContainer.appendChild(btnName);
-// }
+function populateSketchPad(size) {
+    sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+    sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+    
+    for(let i = 0; i < (size * size); i++) {  
+        let square = document.createElement('div');
+        square.style.backgroundColor = 'red';
+        sketchPad.insertAdjacentElement('beforeend',square);    
+    }
+}
 
-// let optionsContainer = 0;
-// optContAttribute = 'optionsContainer';
-
-// window.onload = createADiv(optionsContainer, optContAttribute)
-
-// sketchPadAttribute = 'sketchPad';
-// let sketchPad = 0;
-
-// window.onload = createADiv(sketchPad, sketchPadAttribute);
-
-// let colorPicker = 0;
-// colorPickerAttribute = 'colorPicker';
-// window.onload = createAButton(colorPicker, colorPickerAttribute)
+btnSetSize.addEventListener('click', () => {
+    const sketchPadSize = document.querySelector('#sizeInput').value;
+    populateSketchPad(sketchPadSize);
+})
+    
+    
+    

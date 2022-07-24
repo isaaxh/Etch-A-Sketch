@@ -63,6 +63,7 @@ input {
 }
 
 .sketchPad {
+    display: grid;
     background-color: white;
     min-height: 450px;
     min-width: 400px;
