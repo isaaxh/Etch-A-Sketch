@@ -2,29 +2,25 @@ const sketchPad = document.querySelector('.sketchPad');
 const btnSetSize = document.querySelector('#btnSetSize');
 const btnReset = document.querySelector('#btnReset');
 let sketchPadSize = document.querySelector('#sizeInput').value
-
+let color = 'black';
 
 function populatePad(size) {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
     
-    //const marker = 'black'
+    const marker = 'black'
     
     for(let i = 0; i < (size * size); i++) {  
         const square = document.createElement('div');
         square.classList.add('divsInsidePad');
-        //square.addEventListener('mousedown', markingThePad(marker, square))
-        square.addEventListener('mouseover', () => {
-             square.style.backgroundColor = 'black';
-        })
-        
+        square.addEventListener('mouseover', colorSquare)
         sketchPad.insertAdjacentElement('beforeend',square);    
     }
 }
 
-function markingThePad(color, targetDiv) {
+function colorSquare() {
     console.log('this works')
-    targetDiv.style.backgroundColor = color;
+    this.style.backgroundColor = color;
 }
 
 function sizeValidation(size) {  
@@ -46,5 +42,13 @@ btnReset.addEventListener('click', () => {
     console.log(padSize1);
     populatePad(sketchPadSize);
 })    
+
+function rainbowColor() {
+    
+}
+
+function changeColor(choice) {
+    color = choice;
+}
 
 window.onload = populatePad(sketchPadSize);
