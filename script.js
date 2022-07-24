@@ -1,6 +1,7 @@
 const sketchPad = document.querySelector('.sketchPad');
 const btnSetSize = document.querySelector('#btnSetSize');
 const btnReset = document.querySelector('#btnReset');
+let sketchPadSize = document.querySelector('#sizeInput').value
 
 
 function populatePad(size) {
@@ -35,15 +36,15 @@ function sizeValidation(size) {
     }
 }
 
-btnSetSize.addEventListener('click', () => {
-    const sketchPadSize = document.querySelector('#sizeInput').value;
+const padSize1 = btnSetSize.addEventListener('click', () => {
+    sketchPadSize = document.querySelector('#sizeInput').value;
     sizeValidation(sketchPadSize);
 })
 
 btnReset.addEventListener('click', () => {
     sketchPad.textContent = '';
+    console.log(padSize1);
+    populatePad(sketchPadSize);
 })    
 
-//populatePad(sketchPadSize);
-//const sketchPadSize = document.querySelector('#sizeInput').value
-//window.onload = populatePad(sketchPadSize)
+window.onload = populatePad(sketchPadSize);
