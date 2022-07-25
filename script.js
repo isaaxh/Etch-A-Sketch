@@ -7,18 +7,21 @@ let color = 'rgb(39, 38, 38)';
 function populatePad(size) {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
-        
+
     for(let i = 0; i < (size * size); i++) {  
         const square = document.createElement('div');
-        square.classList.add('divsInsidePad');
+        square.classList.add('squaresInsidePad');
         square.addEventListener('mouseover', colorSquare)
         sketchPad.insertAdjacentElement('beforeend',square);    
     }
 }
 
 function colorSquare() {
-    console.log('this works')
-    this.style.backgroundColor = color;
+    if (color === 'random'){
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+        this.style.backgroundColor = color;
+    }
 }
 
 function sizeValidation(size) {  
@@ -37,12 +40,11 @@ const padSize1 = btnSetSize.addEventListener('click', () => {
 
 btnReset.addEventListener('click', () => {
     sketchPad.textContent = '';
-    console.log(padSize1);
     populatePad(sketchPadSize);
 })    
 
-function rainbowColor() {
-
+function generateRandomNum(){
+    return Math.floor(Math.random() * 99);
 }
 
 function changeColor(choice) {
