@@ -1,15 +1,13 @@
 const sketchPad = document.querySelector('.sketchPad');
 const btnSetSize = document.querySelector('#btnSetSize');
 const btnReset = document.querySelector('#btnReset');
-let sketchPadSize = document.querySelector('#sizeInput').value
-let color = 'black';
+let sketchPadSize = document.querySelector('#sizeInput').value;
+let color = 'rgb(39, 38, 38)';
 
 function populatePad(size) {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
-    
-    const marker = 'black'
-    
+        
     for(let i = 0; i < (size * size); i++) {  
         const square = document.createElement('div');
         square.classList.add('divsInsidePad');
@@ -44,7 +42,7 @@ btnReset.addEventListener('click', () => {
 })    
 
 function rainbowColor() {
-    
+
 }
 
 function changeColor(choice) {
