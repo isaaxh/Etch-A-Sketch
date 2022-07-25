@@ -73,12 +73,8 @@ input {
     box-shadow: 0px 3px 10px #000;
 }
 
-.squaresInsidePad {
-    /*border: 1px solid rgb(54, 53, 53);*/
-    /* background-color: yellow; */
-}
-
-#btnSetSize:hover, #btnBlack:hover, #btnRainbow:hover 
+#btnBlack:hover, 
+#btnRainbow:hover, #btnEraser:hover 
 {
     background-color: rgb(39, 38, 38);
     color: white;

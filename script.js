@@ -1,6 +1,10 @@
 const sketchPad = document.querySelector('.sketchPad');
 const btnSetSize = document.querySelector('#btnSetSize');
 const btnReset = document.querySelector('#btnReset');
+const btnBlack = document.querySelector('#btnBlack');
+const btnRainbow = document.querySelector('#btnRainbow');
+const btnEraser = document.querySelector('#btnEraser');
+const blackColor = 'rgb(39, 38, 38)';
 let sketchPadSize = document.querySelector('#sizeInput').value;
 let color = 'rgb(39, 38, 38)';
 
@@ -33,7 +37,11 @@ function sizeValidation(size) {
     }
 }
 
-const padSize1 = btnSetSize.addEventListener('click', () => {
+function changeColor(choice) {
+    color = choice;
+}
+
+btnSetSize.addEventListener('click', () => {
     sketchPadSize = document.querySelector('#sizeInput').value;
     sizeValidation(sketchPadSize);
 })
@@ -43,12 +51,34 @@ btnReset.addEventListener('click', () => {
     populatePad(sketchPadSize);
 })    
 
-function generateRandomNum(){
-    return Math.floor(Math.random() * 99);
+btnBlack.onclick = () => {
+    changeColor(blackColor);
+    btnBlack.style.backgroundColor = blackColor;
+    btnBlack.style.color = 'white';
+    btnRainbow.style.backgroundColor = 'transparent';
+    btnRainbow.style.color = blackColor;
+    btnEraser.style.backgroundColor = 'transparent';
+    btnEraser.style.color = blackColor;
 }
 
-function changeColor(choice) {
-    color = choice;
+btnRainbow.onclick = () => {
+    changeColor('random')
+    btnBlack.style.backgroundColor = 'transparent';
+    btnBlack.style.color = blackColor;
+    btnRainbow.style.backgroundColor = blackColor;
+    btnRainbow.style.color = 'white';
+    btnEraser.style.backgroundColor = 'transparent';
+    btnEraser.style.color = blackColor;
+}
+
+btnEraser.onclick = () => {
+    changeColor('white')
+    btnBlack.style.backgroundColor = 'transparent';
+    btnBlack.style.color = blackColor;
+    btnRainbow.style.backgroundColor = 'transparent';
+    btnRainbow.style.color = blackColor;
+    btnEraser.style.backgroundColor = blackColor;
+    btnEraser.style.color = 'white';
 }
 
 window.onload = populatePad(sketchPadSize);
