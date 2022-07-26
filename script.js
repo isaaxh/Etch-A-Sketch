@@ -4,9 +4,13 @@ const btnReset = document.querySelector('#btnReset');
 const btnBlack = document.querySelector('#btnBlack');
 const btnRainbow = document.querySelector('#btnRainbow');
 const btnEraser = document.querySelector('#btnEraser');
+const btnDisplayOptions = document.querySelector('.btnDisplayOptions');
+const optionsContainer = document.querySelector('.optionsContainer');
 const blackColor = 'rgb(39, 38, 38)';
 let sketchPadSize = document.querySelector('#sizeInput').value;
 let color = 'rgb(39, 38, 38)';
+let isShowOptions = false;
+
 
 function populatePad(size) {
     sketchPad.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -80,6 +84,22 @@ btnEraser.onclick = () => {
     btnRainbow.style.color = blackColor;
     btnEraser.style.backgroundColor = blackColor;
     btnEraser.style.color = 'white';
+}
+
+btnDisplayOptions.onclick = () => {
+    
+    if (isShowOptions === false) {
+        btnDisplayOptions.style.backgroundColor = blackColor;
+        btnDisplayOptions.style.color = 'white';
+        optionsContainer.style.display = 'flex';
+        isShowOptions = true;
+    } else {
+        btnDisplayOptions.style.backgroundColor = 'transparent';
+        btnDisplayOptions.style.color = blackColor;
+        optionsContainer.style.display = 'none';
+        isShowOptions = false;
+    }
+    
 }
 
 window.onload = populatePad(sketchPadSize);

@@ -97,10 +97,9 @@ input {
         font-size: 50px;
     }
     .optionsContainer{
-        display: block;
+        display: none;
         order: 2;
         width: 100%;
-        gap: px;
     }
     .testContainer{
         display: flex;
