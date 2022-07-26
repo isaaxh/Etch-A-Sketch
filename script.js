@@ -15,7 +15,8 @@ function populatePad(size) {
     for(let i = 0; i < (size * size); i++) {  
         const square = document.createElement('div');
         square.classList.add('squaresInsidePad');
-        square.addEventListener('mouseover', colorSquare)
+        square.addEventListener('mouseover', colorSquare);
+        square.addEventListener('touchmove', colorSquare)
         sketchPad.insertAdjacentElement('beforeend',square);    
     }
 }

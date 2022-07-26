@@ -1,3 +1,10 @@
+:root {
+    --desktop: 1200px;
+    --laptop: 1024px;
+    --tablet: 768px;
+    --phone: 480px;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
@@ -10,13 +17,16 @@ html, body {
     background-color: #f5f5f5;
 }
 
+
+
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    align-items: center;
 }
 
-.secondary-Container {
+.third-Container {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -31,8 +41,10 @@ html, body {
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 30px;
+}
 
-
+.displayOptions {
+    display: none;
 }
 
 .optionsContainer {
@@ -79,3 +91,41 @@ input {
     background-color: rgb(39, 38, 38);
     color: white;
 }
+
+@media (max-width: 480px) {
+    #header {
+        font-size: 50px;
+    }
+    .optionsContainer{
+        display: block;
+        order: 2;
+        width: 100%;
+        gap: px;
+    }
+    .testContainer{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
+    
+    .third-Container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    button, #sizeInput {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .displayOptions {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+
+    }
+    
+};
