@@ -1,4 +1,4 @@
-Project Name: Etch-a-sketch
+Etch-a-sketch
 
 What I plan to create:
 
