@@ -13,3 +13,5 @@ What I have learned completing this project:
 - How to use media query
 - How to toggle a div
 - How to use css grid
+
+live demo: https://isaaxh.github.io/etch-a-sketch/
