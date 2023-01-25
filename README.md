@@ -20,4 +20,7 @@ A web-based drawing app built using HTML, CSS, and JavaScript. The app allows pl
 - Use the "Rainbow" button to enable the rainbow color option
 - Use the "Erase" button to clear the board and start fresh
 
+## App Screen shots
+![Frame 1(3)](https://user-images.githubusercontent.com/98271596/214563647-a7c814e3-4faa-46be-acdf-1cede7362440.png)
+
 [LIVE DEMO](https://isaaxh.github.io/etch-a-sketch)
