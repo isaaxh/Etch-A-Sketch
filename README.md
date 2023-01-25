@@ -1,6 +1,6 @@
-# Etch-a-Sketch Game
+# Etch-a-Sketch App
 
-A web-based drawing game built using HTML, CSS, and JavaScript. The game allows players to create drawings on a virtual Etch-a-Sketch board, featuring a variety of customization options such as the ability to change the board size and select different colors, including a rainbow color option. The game also allows players to erase their drawings and start fresh.
+A web-based drawing app built using HTML, CSS, and JavaScript. The app allows players to create drawings on a virtual Etch-a-Sketch board, featuring a variety of customization options such as the ability to change the board size and select different colors, including a rainbow color option. The app also allows players to erase their drawings and start fresh.
 
 ## Features
 
