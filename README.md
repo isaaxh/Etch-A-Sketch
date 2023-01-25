@@ -1,17 +1,23 @@
-Etch-a-sketch
+# Etch-a-Sketch Game
 
-What I plan to create:
+A web-based drawing game built using HTML, CSS, and JavaScript. The game allows players to create drawings on a virtual Etch-a-Sketch board, featuring a variety of customization options such as the ability to change the board size and select different colors, including a rainbow color option. The game also allows players to erase their drawings and start fresh.
 
-- An app that allows users to making drawings on a pad
-- The size of the pad is changeable
-- color of the brush is changeable
-- The drawing can be erased
-- The app is usable in a smartphone
+## Features
 
-What I have learned completing this project:
+- Create drawings on a virtual Etch-a-Sketch board
+- Change the board size
+- Select different colors, including a rainbow color option
+- Erase drawings and start fresh
+- Simple, elegant, and modern design
+- Responsive and can be played on any device
 
-- How to use media query
-- How to toggle a div
-- How to use css grid
+## How to play
 
-live demo: https://isaaxh.github.io/etch-a-sketch/
+- Open the game in your browser
+- Use the cursor to draw on the board
+- Use the "Set Size" button to adjust the size of the board
+- Use the color buttons to select a color for your drawing
+- Use the "Rainbow" button to enable the rainbow color option
+- Use the "Erase" button to clear the board and start fresh
+
+[LIVE DEMO](https://isaaxh.github.io/etch-a-sketch)
