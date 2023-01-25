@@ -13,7 +13,7 @@ A web-based drawing app built using HTML, CSS, and JavaScript. The app allows pl
 
 ## How to play
 
-- Open the game in your browser bysing the [LIVE DEMO](https://isaaxh.github.io/etch-a-sketch)
+- Open the game in your browser by using the [LIVE DEMO](https://isaaxh.github.io/etch-a-sketch)
 - Use the cursor to draw on the board
 - Use the "Set Size" button to adjust the size of the board
 - Use the color buttons to select a color for your drawing
